@@ -1,3 +1,7 @@
 body {
-    background-color: red;
+    background-image: url("../images/flat-car-vectors.jpg");
 }
+
+button {
+    margin-right: 10px;
+}   
