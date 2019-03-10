@@ -17,8 +17,12 @@ var topicsResults = response.data;
 for (i = 0; i < topicsResults.length; i++) {
 
     if (topicsResults[i].rating === "g") {
- console.log(response.data);
-
+        console.log(response.data);
+        var topicsDiv = $("<div class='topics'>");
+        var rating = response.data[i].rating;
+        var p1 = $("<p>").text("Rating: " + rating);
+        topicsDiv.append(p1);
+        $("#buttons-div").prepend(topicsDiv);
     }
 
 
