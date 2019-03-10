@@ -4,24 +4,25 @@
 
 // sending the ajax response to request the data and then return a response with the data object.
 function alertVehicleName() {
-var vehicleName = $(this).attr("data-name");
+//var vehicleName = $(this).attr("data-name");
 var queryURL =
-"https://api.giphy.com/v1/gifs/search?api_key=OgPKbbyI46IXrLDcpEJOinhz6R4BqGfL&q=" + topics + "&limit=10&offset=0&rating=G&lang=en";
+"https://api.giphy.com/v1/gifs/search?api_key=OgPKbbyI46IXrLDcpEJOinhz6R4BqGfL&q=" + topics + "&limit=10&offset=0&lang=en";
 
 $.ajax({
 url: queryURL,
 method: "GET"
 }).then(function(response) {
 console.log(response);
-    // Creating a div to hold the movie
-    var topicsDiv = $("<div class='topics'>");
-    // Storing the rating data
-    var rating = response.rating;
-    // Creating an element to have the rating displayed
-    var p1 = $("<p>").text("Rating: " + rating);
-    topicsDiv.append(p1);
-    // Putting the entire movie above the previous movies
-    $("#buttons-view").prepend(movieDiv);
+var topicsResults = response.data;
+for (i = 0; i < topicsResults.length; i++) {
+
+    if (topicsResults[i].rating === "g") {
+ console.log(response.data);
+
+    }
+
+
+}
 });
   }
 
@@ -36,7 +37,7 @@ var topics = [
     "bulldozers"
   ];
 
-// creating a function that creates buttons that display on the screen.
+// creating a function that creates buttons and pulls in the data from the object that display on the screen.
 function createButtons() {
   $("#buttons-div").empty();
 
@@ -59,8 +60,6 @@ $("#generate-buttons").on("click", function(event) {
 });
 
 $(document).on("click", ".topics", alertVehicleName);
-
-
 
 // function request to diplay initial buttons 
 createButtons();
