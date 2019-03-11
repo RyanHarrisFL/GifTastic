@@ -31,6 +31,7 @@ function alertVehicleName() {
         var rating = response.data[i].rating;
         var p1 = $("<p>").text("Rating: " + rating);
         var topicsImage = $("<img>");
+        // Adding attribues to create animation
         topicsImage.attr("src", topicsResults[i].images.fixed_height_still.url);
         topicsImage.attr("class", "gif");
         topicsImage.attr("data-state", "still");
@@ -44,6 +45,7 @@ function alertVehicleName() {
         );
         topicsDiv.append(p1);
         topicsDiv.append(topicsImage);
+
         $("#image-div").prepend(topicsDiv);
       }
     }
