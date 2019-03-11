@@ -1,7 +1,23 @@
 body {
     background-image: url("../images/flat-car-vectors.jpg");
+    /* background-color: rgb(187, 100, 20); */
+    background-blend-mode: multiply;
 }
 
 button {
     margin-right: 10px;
 }   
+
+h1 {
+
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 60px;
+    border: 5px;
+    border-color: black
+
+}
+
+.float {
+    float: left;
+    margin: 10px;
+}

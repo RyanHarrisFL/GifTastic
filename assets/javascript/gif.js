@@ -27,7 +27,7 @@ function alertVehicleName() {
     for (i = 0; i < topicsResults.length; i++) {
       if (topicsResults[i].rating === "g") {
         console.log(response.data);
-        var topicsDiv = $("<div>");
+        var topicsDiv = $("<div class='float'>");
         var rating = response.data[i].rating;
         var p1 = $("<p>").text("Rating: " + rating);
         var topicsImage = $("<img>");
