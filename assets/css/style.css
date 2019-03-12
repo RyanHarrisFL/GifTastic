@@ -1,7 +1,9 @@
 body {
-    background-image: url("../images/flat-car-vectors.jpg");
-    /* background-color: rgb(187, 100, 20); */
-    background-blend-mode: multiply;
+    
+   background-image: url("../images/flat-car-vectors.jpg");
+   background-color: rgb(248, 241, 241, 0.95);
+   background-blend-mode: screen;
+    
 }
 
 button {
@@ -17,7 +19,23 @@ h1 {
 
 }
 
+.underline {
+    text-decoration: underline; 
+    font-style: italic
+}
+
 .float {
     float: left;
     margin: 10px;
+}
+
+.bold {
+    font-weight: 600
+}
+
+#generate-buttons {
+
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
 }

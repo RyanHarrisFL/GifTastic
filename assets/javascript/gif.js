@@ -62,7 +62,6 @@ function alertVehicleName() {
       }
     });
     // Pause Function End
-    
   });
 }
 
@@ -72,7 +71,7 @@ function createButtons() {
 
   for (i = 0; i < topics.length; i++) {
     var buttonsDiv = $("<button>");
-    buttonsDiv.addClass("topics");
+    buttonsDiv.addClass("topics btn btn-primary mb-3");
     buttonsDiv.attr("data-name", topics[i]);
     buttonsDiv.text(topics[i]);
     $("#buttons-div").append(buttonsDiv);
